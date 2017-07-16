@@ -21,7 +21,7 @@
      
          _pdbx_xfel_data_reduction.diffrn_id           1
          _pdbx_xfel_data_reduction.frames_total        7324430
-         _pdbx_xfel_data_reduction.frames_hits         1797503
+         _pdbx_xfel_data_reduction.crystal_hits         1797503
          _pdbx_xfel_data_reduction.frames_indexed      578620
 ```
 
@@ -30,15 +30,27 @@
 
 | Attribute | Key | Required | Type | Units | Enumerated | Bounded |
 | --------- | --- | -------- | ---- | ----- | ---------- | ------- |
+| crystal_hits | no | no | int | None | no | no |
 | diffrn_id | yes | yes | code | None | no | no |
+| droplet_hits | no | no | int | None | no | no |
 | frames_failed_index | no | no | int | None | no | no |
-| frames_hits | no | no | int | None | no | no |
 | frames_indexed | no | no | int | None | no | no |
 | frames_total | no | no | int | None | no | no |
+| frame_hits | no | no | int | None | no | no |
+| lattices_indexed | no | no | int | None | no | no |
 | pulse_events | no | no | int | None | no | no |
 | run_numbers | no | no | text | None | no | no |
 
 ---
+
+#### _pdbx_xfel_data_reduction.crystal_hits
+
+
+            For experiments in which samples are provided in a
+            continuous stream, the total number of frames collected
+            in which the crystal was hit.
+
+
 
 #### _pdbx_xfel_data_reduction.diffrn_id (key)
 
@@ -48,21 +60,21 @@
 
 
 
+#### _pdbx_xfel_data_reduction.droplet_hits
+
+
+            For experiments in which samples are provided in a
+            continuous stream, the total number of frames collected
+            in which a droplet was hit.
+
+
+
 #### _pdbx_xfel_data_reduction.frames_failed_index
 
 
             For experiments in which samples are provided in a
             continuous stream, the total number of data frames collected
             that contained a "hit" but failed to index.
-
-
-
-#### _pdbx_xfel_data_reduction.frames_hits
-
-
-            For experiments in which samples are provided in a
-            continuous stream, the total number of data frames collected
-            in which the sample was hit.
 
 
 
@@ -80,6 +92,23 @@
 
             The total number of data frames collected for this
             data set.
+
+
+
+#### _pdbx_xfel_data_reduction.frame_hits
+
+
+            For experiments in which samples are provided in a
+            continuous stream, the total number of data frames collected
+            in which the sample was hit.
+
+
+
+#### _pdbx_xfel_data_reduction.lattices_indexed
+
+
+            For experiments in which samples are provided in a
+            continuous stream, the total number of lattices indexed.
 
 
 
