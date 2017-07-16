@@ -1,0 +1,39 @@
+data_example1
+
+# Example from Batyuk et al, "Native phasing of x-ray free-electron laser data for a G protein-coupled receptor", Sci Adv 2(9) 2016 el600292
+
+#
+_diffrn.id                        1
+_diffrn.crystal_id                .
+#
+_pdbx_xfel_source.diffrn_id       1
+_pdbx_xfel_source.site            'SLAC LCLS'
+_pdbx_xfel_source.site_beamline   'SLAC LCLS BEAMLINE CXI (SC1)'
+#
+_pdbx_xfel_sample_delivery.diffrn_id   1
+_pdbx_xfel_sample_delivery.description 'LCP injector'
+#
+_pdbx_xfel_sample_delivery_injection.diffrn_id               1
+_pdbx_xfel_sample_delivery_injection.description             'microextrusion injector'
+_pdbx_xfel_sample_delivery_injection.injector_diameter       50
+_pdbx_xfel_sample_delivery_injection.flow_rate               0.22
+_pdbx_xfel_sample_delivery_injection.carrier_solvent         'Crystallization buffer with 7.9 MAG'
+#
+_pdbx_xfel_measurement.diffrn_id                1
+_pdbx_xfel_measurement.pulse_duration           45
+_pdbx_xfel_measurement.photons_per_pulse        .17
+_pdbx_xfel_measurement.focal_spot_size          1.8
+_pdbx_xfel_measurement.collection_time_total   61036
+#
+_pdbx_xfel_detector.diffrn_id     1
+_pdbx_xfel_detector.type          'CS-PAD CXI-1'
+_pdbx_xfel_detector.detector      'PIXEL ARRAY DETECTOR'
+_pdbx_xfel_detector.frequency     120
+#
+_pdbx_xfel_data_reduction.diffrn_id           1
+_pdbx_xfel_data_reduction.frames_total        7324430
+_pdbx_xfel_data_reduction.frames_hits         1797503
+_pdbx_xfel_data_reduction.frames_indexed      578620
+
+
+
