@@ -1,6 +1,7 @@
-data_example1
+data_xfel_example
 
-# Example from Batyuk et al, "Native phasing of x-ray free-electron laser data for a G protein-coupled receptor", Sci Adv 2(9) 2016 el600292
+# Example from Batyuk et al, "Native phasing of x-ray free-electron laser data for a
+# G protein-coupled receptor", Sci Adv 2(9) 2016
 
 #
 _diffrn.id                        1
@@ -32,7 +33,7 @@ _pdbx_xfel_detector.frequency     120
 #
 _pdbx_xfel_data_reduction.diffrn_id           1
 _pdbx_xfel_data_reduction.frames_total        7324430
-_pdbx_xfel_data_reduction.frames_hits         1797503
+_pdbx_xfel_data_reduction.crystal_hits        1797503
 _pdbx_xfel_data_reduction.frames_indexed      578620
 
 

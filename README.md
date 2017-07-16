@@ -7,4 +7,4 @@ for X-ray free electron laser extension.
 
 - [XFEL Extension Dictionary (markup)](xfel-extensions-v2.md)
 
-- [XFEL example file](xfel_example_20170712.cif)
+- [XFEL example file](xfel_example_20170716.cif)

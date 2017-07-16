@@ -9,12 +9,14 @@
 #  8-Nov-2016  Revised categories into independent pdbx_xfel categories
 #  3-Jan-2017  Updated with suggestions from Nicholas Sauter
 # 12-Jul-2017  Update type for _pdbx_xfel_detector.detector
-#
+# 16-Jul-2017  Added Nicholas Sauters comments, _pdbx_xfel_data_reduction.lattices_indexed,
+#              _pdbx_xfel_data_reduction.crystal_hits, _pdbx_xfel_data_reduction.droplet_hits.
+#              Changed _pdbx_xfel_data_reduction.frames_hits to _pdbx_xfel_data_reduction.frame_hits.
 #
 
-############################################
+###################
 # PDBX_XFEL_SOURCE
-###########################################
+###################
 save_pdbx_xfel_source
     _category.description
 ;              Data items in the PDBX_XFEL_SOURCE category record
@@ -97,9 +99,9 @@ save__pdbx_xfel_source.site_beamline
 
 
 
-###########################################
+#######################
 # PDBX_XFEL_MEASUREMENT
-###########################################
+#######################
 
 save_pdbx_xfel_measurement
     _category.description
@@ -260,9 +262,9 @@ save__pdbx_xfel_measurement.collection_time_total
     _item_examples.case          120.0
      save_
 
-#########################################################
+#############################
 ##  PDBX_XFEL_SAMPLE_DELIVERY
-#########################################################
+#############################
 
 save_pdbx_xfel_sample_delivery
     _category.description
@@ -325,9 +327,9 @@ save__pdbx_xfel_sample_delivery.description
      save_
 
 
-#########################################################
+########################################
 ##  PDBX_XFEL_SAMPLE_DELIVERY_INJECTION
-#########################################################
+########################################
 
 save_pdbx_xfel_sample_delivery_injection
     _category.description
@@ -479,9 +481,9 @@ save__pdbx_xfel_sample_delivery_injection.preparation
      save_
 
 
-###########################################################
+#####################
 # PDBX_XFEL_DETECTOR
-###########################################################
+#####################
 
 save_pdbx_xfel_detector
     _category.description
@@ -580,9 +582,9 @@ save__pdbx_xfel_detector.frequency
      save_
 
 
-#########################################################
-##  pdbx_xfel_data_reduction
-#########################################################
+##############################
+##  PDBX_XFEL_DATA_REDUCTION
+##############################
 save_pdbx_xfel_data_reduction
     _category.description
 ;              Data items in the PDBX_XFEL_DATA_REDUCTION category record
@@ -605,7 +607,7 @@ save_pdbx_xfel_data_reduction
 ;
     _pdbx_xfel_data_reduction.diffrn_id           1
     _pdbx_xfel_data_reduction.frames_total        7324430
-    _pdbx_xfel_data_reduction.frames_hits         1797503
+    _pdbx_xfel_data_reduction.crystal_hits         1797503
     _pdbx_xfel_data_reduction.frames_indexed      578620
 ;
      save_
@@ -643,7 +645,6 @@ save__pdbx_xfel_data_reduction.frames_total
 
 save__pdbx_xfel_data_reduction.pulse_events
     _item_description.description
-
 ;           For FEL experiments, the number of pulse events in the dataset.
 ;
     _item.name                  '_pdbx_xfel_data_reduction.pulse_events'
@@ -653,14 +654,44 @@ save__pdbx_xfel_data_reduction.pulse_events
      save_
 
 
-save__pdbx_xfel_data_reduction.frames_hits
+save__pdbx_xfel_data_reduction.frame_hits
     _item_description.description
 
 ;           For experiments in which samples are provided in a
             continuous stream, the total number of data frames collected
             in which the sample was hit.
 ;
-    _item.name                  '_pdbx_xfel_data_reduction.frames_hits'
+    _item.name                  '_pdbx_xfel_data_reduction.frame_hits'
+    _item.category_id             pdbx_xfel_data_reduction
+    _item.mandatory_code          no
+    _item_type.code               int
+     loop_
+    _item_examples.case          1200 5750
+     save_
+
+save__pdbx_xfel_data_reduction.crystal_hits
+    _item_description.description
+
+;           For experiments in which samples are provided in a
+            continuous stream, the total number of frames collected
+            in which the crystal was hit.
+;
+    _item.name                  '_pdbx_xfel_data_reduction.crystal_hits'
+    _item.category_id             pdbx_xfel_data_reduction
+    _item.mandatory_code          no
+    _item_type.code               int
+     loop_
+    _item_examples.case          1200 5750
+     save_
+
+save__pdbx_xfel_data_reduction.droplet_hits
+    _item_description.description
+
+;           For experiments in which samples are provided in a
+            continuous stream, the total number of frames collected
+            in which a droplet was hit.
+;
+    _item.name                  '_pdbx_xfel_data_reduction.droplet_hits'
     _item.category_id             pdbx_xfel_data_reduction
     _item.mandatory_code          no
     _item_type.code               int
@@ -691,6 +722,20 @@ save__pdbx_xfel_data_reduction.frames_indexed
             that were indexed.
 ;
     _item.name                  '_pdbx_xfel_data_reduction.frames_indexed'
+    _item.category_id             pdbx_xfel_data_reduction
+    _item.mandatory_code          no
+    _item_type.code               int
+     loop_
+    _item_examples.case          1200 5750
+     save_
+
+save__pdbx_xfel_data_reduction.lattices_indexed
+    _item_description.description
+
+;           For experiments in which samples are provided in a
+            continuous stream, the total number of lattices indexed.
+;
+    _item.name                  '_pdbx_xfel_data_reduction.lattices_indexed'
     _item.category_id             pdbx_xfel_data_reduction
     _item.mandatory_code          no
     _item_type.code               int
