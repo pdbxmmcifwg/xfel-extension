@@ -1,10 +1,10 @@
-## XFEL Extension Dictionary
+## XFEL/SX Extension Dictionary
 
 The documents in this repository include content extension definitions and example data files
-for X-ray free electron laser extension.
+for X-ray Free Electron Laser(XFEL) and Serial Crystallography(SX) extension.
 
-- [XFEL Extension Dictionary (text)](xfel-extensions-v2.dic)
+- [XFEL/SX Extension Dictionary (text)](xfel-extensions-v3.dic)
 
-- [XFEL Extension Dictionary (markup)](xfel-extensions-v2.md)
+- [XFEL Extension Dictionary (markup)](xfel-extensions-v3.md)
 
-- [XFEL example file](xfel_example_20170716.cif)
+- [XFEL/SX example file](xfel_example_20200124.cif)
